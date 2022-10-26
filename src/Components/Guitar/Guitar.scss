@@ -1,0 +1,9 @@
+.guitar {
+  display: flex;
+  flex-direction: row-reverse;
+  .voidString {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+}

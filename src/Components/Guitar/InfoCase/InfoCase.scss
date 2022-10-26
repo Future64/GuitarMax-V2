@@ -1,0 +1,46 @@
+.infoCase {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: azure;
+  font-weight: 700;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  background-color: rgba(222, 176, 120, 0.738);
+  border-color: black;
+}
+
+.infoCase:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.lambdaVoidString {
+  border: 1px solid;
+  border-color: aqua;
+  color: rgb(6, 8, 8);
+  background-color: rgba(0, 255, 255, 0.148);
+}
+.lambdaString {
+  border: 1px solid;
+  border-color: rgb(0, 255, 136);
+  color: rgb(6, 8, 8);
+  background-color: rgba(173, 250, 211, 0.801);
+  // color: azure;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.tonique {
+  border-color: rgb(184, 34, 64);
+  background-color: rgb(184, 34, 64);
+  color: rgb(255, 255, 255);
+}
+.tierce {
+  border-color: rgb(50, 114, 198);
+  background-color: rgb(50, 114, 198);
+  color: rgb(255, 255, 255);
+}

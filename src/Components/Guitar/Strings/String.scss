@@ -1,0 +1,41 @@
+.string {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 11px;
+  padding-left: 2.8%;
+  padding-right: 0.5%;
+}
+// .string:hover {
+//   opacity: 0.8;
+//   cursor: pointer;
+// }
+
+.string1 {
+  background-color: #baa46c;
+  height: 5px;
+}
+.string2 {
+  background-color: #baa46c;
+  height: 4px;
+}
+.string3 {
+  background-color: #baa46c;
+  height: 4px;
+}
+.string4 {
+  background-color: #dac6a0;
+  height: 3px;
+}
+.string5 {
+  background-color: #dac6a0;
+  height: 3px;
+}
+.string6 {
+  background-color: #dac6a0;
+  height: 3px;
+}

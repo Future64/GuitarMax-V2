@@ -1,0 +1,14 @@
+.select-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  Button {
+    margin-top: 20px;
+    // width: 70%;
+  }
+}
