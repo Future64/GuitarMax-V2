@@ -17,7 +17,7 @@ const MainPage = () => {
           ["Manage Coupon’s", "img/manage-coupon.svg"],
         ]}
       />
-      <Guitar />
+      {/* <Guitar /> */}
     </div>
   );
 };

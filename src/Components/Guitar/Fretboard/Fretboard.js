@@ -11,7 +11,6 @@ import { UserInputContext } from "../../../Context/UserInputContext";
 
 const Fretboard = ({ nbStrings, nbOfFrets, tunning, firstNote }) => {
   const { userInputs } = useContext(UserInputContext);
-  console.log(userInputs);
   return (
     <div className="fretboard">
       <div className="landmark">

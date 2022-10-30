@@ -64,7 +64,143 @@ const CustomForm = () => {
     conditionAlt,
     0
   );
-  console.log(scaleToDisplay);
+
+  const intervalsDefine = (scaleToDisplay) => {
+    let intervals = ["T"];
+    let degrees = ["I"];
+    if (scaleToDisplay[1] === 1) {
+      intervals.push("2m");
+      degrees.push("IIb");
+    } else if (scaleToDisplay[1] === 2) {
+      intervals.push("2M");
+      degrees.push("II");
+    } else if (scaleToDisplay[1] === 3) {
+      intervals.push("3m");
+      degrees.push("IIIb");
+    } else if (scaleToDisplay[1] === 4) {
+      intervals.push("3M");
+      degrees.push("III");
+    } else if (scaleToDisplay[1] === 5) {
+      intervals.push("4j");
+      degrees.push("IV");
+    } else if (scaleToDisplay[1] === 6) {
+      intervals.push("5dim");
+      degrees.push("Vb");
+    } else if (scaleToDisplay[1] === 7) {
+      intervals.push("5j");
+      degrees.push("V");
+    } else if (scaleToDisplay[1] === 8) {
+      intervals.push("5aug");
+      degrees.push("V#");
+    } else if (scaleToDisplay[1] === 9) {
+      intervals.push("6M");
+      degrees.push("VI");
+    } else if (scaleToDisplay[1] === 10) {
+      intervals.push("7m");
+      degrees.push("VIIb");
+    } else if (scaleToDisplay[1] === 11) {
+      intervals.push("7M");
+      degrees.push("VII");
+    }
+
+    if (scaleToDisplay[2] === 3) {
+      intervals.push("3m");
+      degrees.push("IIIb");
+    } else if (scaleToDisplay[2] === 4) {
+      intervals.push("3M");
+      degrees.push("III");
+    } else if (scaleToDisplay[2] === 5) {
+      intervals.push("4j");
+      degrees.push("IV");
+    } else if (scaleToDisplay[2] === 6) {
+      intervals.push("5dim");
+      degrees.push("Vb");
+    } else if (scaleToDisplay[2] === 7) {
+      intervals.push("5j");
+      degrees.push("V");
+    } else if (scaleToDisplay[2] === 8) {
+      intervals.push("5aug");
+      degrees.push("V#");
+    } else if (scaleToDisplay[2] === 9) {
+      intervals.push("6M");
+      degrees.push("VI");
+    } else if (scaleToDisplay[2] === 10) {
+      intervals.push("7m");
+      degrees.push("VIIb");
+    } else if (scaleToDisplay[2] === 11) {
+      intervals.push("7M");
+      degrees.push("VII");
+    }
+
+    if (scaleToDisplay[3] === 5) {
+      intervals.push("4j");
+      degrees.push("IV");
+    } else if (scaleToDisplay[3] === 6) {
+      intervals.push("4aug");
+      degrees.push("IV#");
+    } else if (scaleToDisplay[3] === 7) {
+      intervals.push("5j");
+      degrees.push("V");
+    } else if (scaleToDisplay[3] === 8) {
+      intervals.push("5aug");
+    } else if (scaleToDisplay[3] === 9) {
+      intervals.push("6M");
+    } else if (scaleToDisplay[3] === 10) {
+      intervals.push("7m");
+    } else if (scaleToDisplay[3] === 11) {
+      intervals.push("7M");
+    }
+
+    if (scaleToDisplay[4] === 6) {
+      intervals.push("5dim");
+    } else if (scaleToDisplay[4] === 7) {
+      intervals.push("5j");
+    } else if (scaleToDisplay[4] === 8) {
+      intervals.push("5aug");
+      degrees.push("V#");
+    } else if (scaleToDisplay[4] === 9) {
+      intervals.push("6M");
+      degrees.push("VI");
+    } else if (scaleToDisplay[4] === 10) {
+      intervals.push("7m");
+      degrees.push("VIIb");
+    } else if (scaleToDisplay[4] === 11) {
+      intervals.push("7M");
+      degrees.push("VII");
+    }
+
+    if (scaleToDisplay[5] === 8) {
+      intervals.push("6m");
+      degrees.push("VIb");
+    } else if (scaleToDisplay[5] === 9) {
+      intervals.push("6M");
+      degrees.push("VI");
+    } else if (scaleToDisplay[5] === 10) {
+      intervals.push("7m");
+      degrees.push("VIIb");
+    } else if (scaleToDisplay[5] === 11) {
+      intervals.push("7M");
+      degrees.push("VII");
+    }
+
+    if (scaleToDisplay[6] === 9) {
+      intervals.push("7dim");
+      degrees.push("VIIbb");
+    } else if (scaleToDisplay[6] === 10) {
+      intervals.push("7m");
+      degrees.push("VIIb");
+    } else if (scaleToDisplay[6] === 11) {
+      intervals.push("7M");
+      degrees.push("VII");
+    }
+
+    const scaleStructure = {
+      intervals: intervals,
+      degrees: degrees,
+    };
+    return scaleStructure;
+  };
+  console.log(intervalsDefine(scales[0].lydianScale));
 
   return (
     <div>
@@ -119,8 +255,8 @@ const CustomForm = () => {
                   name="group1"
                   type={type}
                   id="tonique"
-                  value="tonique"
-                  onChange={handleInputChange}
+                  value={values}
+                  onChange={(e) => handleInputChange(e)}
                 />
                 <Form.Check
                   inline
@@ -129,7 +265,7 @@ const CustomForm = () => {
                   type={type}
                   id="tierce"
                   value="tierce"
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e)}
                 />
                 <Form.Check
                   inline
@@ -137,7 +273,7 @@ const CustomForm = () => {
                   type={type}
                   id="quinte"
                   value="quinte"
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e)}
                 />
                 <Form.Check
                   inline
@@ -145,7 +281,7 @@ const CustomForm = () => {
                   type={type}
                   id="septieme"
                   value="septieme"
-                  onChange={handleInputChange}
+                  onChange={(e) => handleInputChange(e)}
                 />
               </div>
             ))}

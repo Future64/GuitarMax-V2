@@ -8,8 +8,8 @@ const UserInputContextProvider = (props) => {
     alt: "",
     note: "C",
     scale: "Majeure naturel",
-    tonique: "",
-    tierce: "",
+    tonique: false,
+    tierce: false,
     quinte: "",
     septieme: "",
   });
